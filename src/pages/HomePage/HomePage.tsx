@@ -7,12 +7,42 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { motion } from "framer-motion";
+
 import styles from "./HomePage.module.css";
 
 type SocialLinkIcon = {
   path: string;
   icon: LucideIcon;
 };
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7 },
+    ease: "easeOut",
+  },
+};
+
+const imageVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.9, ease: "easeOut" },
+  },
+} as const;
 
 const SOCIAL_LINKS: readonly SocialLinkIcon[] = [
   { path: "https://github.com/Sakiff", icon: Github },
@@ -26,10 +56,18 @@ const SOCIAL_LINKS: readonly SocialLinkIcon[] = [
 const HomePage = () => {
   return (
     <div className="flex items-center justify-center pt-0 lg:pt-20">
-      <div className="flex items-center justify-around pt-10 w-11/12 flex-col lg:flex-row gap-5 lg:gap-0 ">
+      <motion.div
+        className="flex items-center justify-around pt-10 w-11/12 flex-col lg:flex-row gap-5 lg:gap-0 "
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Hero Text (Left Side) */}
-        <div className="flex items-center lg:items-start  flex-col gap-3 lg:gap-2 w-full lg:w-1/3">
-          <div className={styles.handUnderlineWrapper}>
+        <motion.div
+          className="flex items-center lg:items-start  flex-col gap-3 lg:gap-2 w-full lg:w-1/3"
+          variants={container}
+        >
+          <motion.div className={styles.handUnderlineWrapper} variants={fadeUp}>
             <span className="relative z-10 text-xl">MERN Stack Developer</span>
 
             <svg
@@ -47,17 +85,28 @@ const HomePage = () => {
       "
               />
             </svg>
-          </div>
-          <strong className={styles.fontSize}>Hello I'm</strong>
-          <strong className={` text-amber-700 ${styles.fontSize}`}>
+          </motion.div>
+          <motion.strong className={styles.fontSize} variants={fadeUp}>
+            Hello I'm
+          </motion.strong>
+          <motion.strong
+            className={` text-amber-700 ${styles.fontSize}`}
+            variants={fadeUp}
+          >
             Fataliyev Sakif
-          </strong>
-          <p className="text-lg text-center lg:text-start">
+          </motion.strong>
+          <motion.p
+            className="text-lg text-center lg:text-start"
+            variants={fadeUp}
+          >
             I craft digital experiences that feel simple, smooth, and alive.
             Where creativity meets clean and purposeful code.
-          </p>
+          </motion.p>
 
-          <div className="flex items-center justify-center gap-3">
+          <motion.div
+            className="flex items-center justify-center gap-3"
+            variants={fadeUp}
+          >
             <Button variant={"outline"} className="uppercase cursor-pointer">
               Download CV <Download />
             </Button>
@@ -69,18 +118,23 @@ const HomePage = () => {
                 </Button>
               </a>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Hero Section Photo (Right Side) */}
-        <div className={`border-2 ${styles.borderAnimation}`}>
+        <motion.div
+          className={`border-2 ${styles.borderAnimation}`}
+          variants={imageVariant}
+          initial="hidden"
+          animate="visible"
+        >
           <img
             src="/assets/hero_image.jpeg"
             alt="profile_photo"
             className="w-full h-full "
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

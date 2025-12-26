@@ -84,7 +84,7 @@ const Navbar = () => {
                   : "opacity-0 pointer-events-none -translate-y-2"
               } transition-all duration-300 ease-in-out`}
             >
-              <MobileBar />
+              <MobileBar openMenu={openMenu} />
             </div>
           </div>
         </div>
