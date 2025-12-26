@@ -25,11 +25,29 @@ const SOCIAL_LINKS: readonly SocialLinkIcon[] = [
 
 const HomePage = () => {
   return (
-    <div className="flex items-center justify-center pt-20">
+    <div className="flex items-center justify-center pt-0 lg:pt-20">
       <div className="flex items-center justify-around pt-10 w-11/12 flex-col lg:flex-row gap-5 lg:gap-0 ">
         {/* Hero Text (Left Side) */}
         <div className="flex items-center lg:items-start  flex-col gap-3 lg:gap-2 w-full lg:w-1/3">
-          <span className="text-xl">MERN Stack Developer</span>
+          <div className={styles.handUnderlineWrapper}>
+            <span className="relative z-10 text-xl">MERN Stack Developer</span>
+
+            <svg
+              className={styles.handUnderlineSvg}
+              viewBox="0 0 200 20"
+              preserveAspectRatio="none"
+            >
+              <path
+                className={styles.handUnderlinePath}
+                d="
+        M5 12
+        C 20 16, 40 8, 60 12
+        C 80 16, 100 9, 120 13
+        C 140 17, 160 10, 195 12
+      "
+              />
+            </svg>
+          </div>
           <strong className={styles.fontSize}>Hello I'm</strong>
           <strong className={` text-amber-700 ${styles.fontSize}`}>
             Fataliyev Sakif

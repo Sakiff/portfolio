@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import DesktopBar from "@/components/Navbar/DesktopBar/DesktopBar";
 import { useEffect, useState } from "react";
 import MobileBar from "./MobileBar/MobileBar";
-import { ModeToggle } from "../Theme/toggle";
+import { ModeToggle } from "../Theme/Toggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,11 +32,14 @@ const Navbar = () => {
   return (
     <div className={`flex justify-center`}>
       <div className=" w-full xl:w-11/12 relative">
+        {/* Navbar Border 1 */}
         <div
           className={` ${
             menuOpen ? "h-[calc(100vw+100px)]" : "h-20"
           } border-5 border-border rounded-xl transition-all duration-300 ease-in-out `}
         >
+          {/* Navbar Border 2 */}
+
           <div
             className={`${
               menuOpen ? "h-[calc(100vw+100px)]" : "h-20"
@@ -44,9 +47,9 @@ const Navbar = () => {
           >
             <div className="flex items-center justify-between pt-2 px-10 md:justify-around md:px-0 ">
               {/* Logo */}
-              <div className="flex items-center gap-5">
+              <div className="flex items-center gap-5 ">
                 <Link to={"/"}>
-                  <h1 className="text-3xl">
+                  <h1 className="text-3xl transition-all duration-400">
                     Sakif <strong className="text-amber-600">.</strong>
                   </h1>
                 </Link>

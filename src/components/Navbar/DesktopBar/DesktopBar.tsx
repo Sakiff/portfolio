@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/Theme/toggle";
+import { ModeToggle } from "@/components/Theme/Toggle";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -28,7 +28,10 @@ const DesktopBar = () => {
         <NavigationMenuList>
           {MENU_ITEMS.map(({ label, path }) => (
             <NavigationMenuItem key={path}>
-              <NavigationMenuLink asChild className="text-xl">
+              <NavigationMenuLink
+                asChild
+                className="text-xl transition-all duration-400 "
+              >
                 <Link to={path}>{label}</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
