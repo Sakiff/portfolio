@@ -5,7 +5,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 type MenuItem = {
   label: string;
@@ -30,9 +30,9 @@ const DesktopBar = () => {
             <NavigationMenuItem key={path}>
               <NavigationMenuLink
                 asChild
-                className="text-xl transition-all duration-400 "
+                className="text-xl transition-all duration-400 hover:text-input hover:bg-background focus:bg-background "
               >
-                <Link to={path}>{label}</Link>
+                <NavLink to={path}>{label}</NavLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
