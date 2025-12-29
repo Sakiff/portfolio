@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 import { useRef } from "react";
 
+import { motion } from "framer-motion";
+
 import Lenis from "@studio-freight/lenis";
 
 const ServicesPage = () => {
@@ -62,7 +64,16 @@ const ServicesPage = () => {
   requestAnimationFrame(raf);
 
   return (
-    <div className="px-0 md:px-20 " ref={container}>
+    <motion.div
+      className="px-0 md:px-20 "
+      ref={container}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.7, ease: "easeOut" },
+      }}
+    >
       {SERVICE_CARDS.map(({ cardNumber, title, text, icon: Icon }) => (
         <ServicesCard
           Icon={Icon}
@@ -75,7 +86,7 @@ const ServicesPage = () => {
           progress={scrollYProgress}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

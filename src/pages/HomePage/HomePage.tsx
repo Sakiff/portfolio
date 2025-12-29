@@ -30,10 +30,9 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
-    ease: "easeOut",
+    transition: { duration: 0.7, ease: "easeOut" },
   },
-};
+} as const;
 
 const imageVariant = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -93,14 +92,20 @@ const HomePage = () => {
             className={` text-amber-700 ${styles.fontSize}`}
             variants={fadeUp}
           >
-            Fataliyev Sakif
+            Sakif
           </motion.strong>
           <motion.p
             className="text-lg text-center lg:text-start"
             variants={fadeUp}
           >
-            I craft digital experiences that feel simple, smooth, and alive.
-            Where creativity meets clean and purposeful code.
+            Frontend developer specializing in
+            <strong className="text-blue-400"> React</strong>, building scalable
+            UI systems with <strong>Tailwind CSS</strong>, crafting smooth
+            animations with{" "}
+            <strong className="text-pink-500">Framer Motion</strong>, and
+            integrating them with{" "}
+            <strong className="text-green-600">Node.js</strong>-powered
+            backends.
           </motion.p>
 
           <motion.div

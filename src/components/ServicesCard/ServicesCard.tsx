@@ -54,7 +54,7 @@ const ServicesCard = ({
         px-6 py-8 md:p-10
         shadow-2xl transition-all duration-1000`}
       >
-        {/* SCROLL HINT – only desktop & first card */}
+        {/* SCROLL HINT  */}
         {cardNumber === 0 && <ScrollHint />}
 
         {/* subtle border */}
@@ -103,7 +103,6 @@ const ServicesCard = ({
   );
 };
 
-// Scroll Hint
 // Scroll Hint
 const ScrollHint = () => {
   return (
