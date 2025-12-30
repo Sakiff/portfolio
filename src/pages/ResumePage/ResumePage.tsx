@@ -36,16 +36,13 @@ const ResumePage = () => {
   };
 
   return (
-    <motion.div
-      className="grid xl:grid-cols-2 grid-cols-1 gap-y-10 items-start justify-center pt-15"
-      variants={containerVariant}
-      initial="hidden"
-      animate="visible"
-    >
+    <motion.div className="grid xl:grid-cols-2 grid-cols-1 gap-y-10 items-start justify-center pt-15 xl:pr-20">
       {/* Left: Tabs */}
       <motion.div
         className="flex items-start xl:items-center justify-center flex-col gap-10"
         variants={containerVariant}
+        initial="hidden"
+        animate="visible"
       >
         <h1 className="text-4xl font-semibold ">Why hire me?</h1>
         <div className="flex flex-col gap-5 w-full xl:w-100 ">
