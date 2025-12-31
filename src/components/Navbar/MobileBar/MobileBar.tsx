@@ -14,7 +14,6 @@ const MobileBar = ({ openMenu }: OpenMenuProps) => {
     { label: "Services", path: "/services" },
     { label: "Resume", path: "/resume" },
     { label: "Work", path: "/work" },
-    { label: "Contact", path: "/contact" },
   ];
 
   return (
