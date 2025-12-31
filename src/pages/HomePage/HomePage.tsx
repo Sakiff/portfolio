@@ -112,9 +112,11 @@ const HomePage = () => {
             className="flex items-center justify-center gap-3"
             variants={fadeUp}
           >
-            <Button variant={"outline"} className="uppercase cursor-pointer">
-              Download CV <Download />
-            </Button>
+            <a href="/cv/sakif_cv.pdf" download>
+              <Button variant={"outline"} className="uppercase cursor-pointer">
+                Download CV <Download />
+              </Button>
+            </a>
 
             {SOCIAL_LINKS.map(({ path, icon: Icon }) => (
               <a href={path} target="_blank" key={path}>
