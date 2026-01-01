@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router";
+import { lazy } from "react";
 import Root from "./pages/Root";
-import HomePage from "./pages/HomePage/HomePage";
-import ServicesPage from "./pages/ServicePage/ServicesPage";
-import ResumePage from "./pages/ResumePage/ResumePage";
-import WorkPage from "./pages/WorkPage/WorkPage";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const ServicesPage = lazy(() => import("./pages/ServicePage/ServicesPage"));
+const ResumePage = lazy(() => import("./pages/ResumePage/ResumePage"));
+const WorkPage = lazy(() => import("./pages/WorkPage/WorkPage"));
 
 function App() {
   return (
