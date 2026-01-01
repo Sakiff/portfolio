@@ -87,7 +87,7 @@ const ServicesCard = ({
           </p>
 
           {/* CTA */}
-          <Link to="/portfolio" className="self-start md:self-end">
+          <Link to="/work" className="self-start md:self-end">
             <motion.div
               whileHover={{ x: 10, y: -10, scale: 1.05 }}
               transition={{ type: "spring", stiffness: 220, damping: 16 }}
