@@ -22,7 +22,7 @@ const MENU_ITEMS: readonly MenuItem[] = [
 const DesktopBar = () => {
   return (
     <div className="flex items-center justify-end gap-10">
-      {/* Navigation Menu Items */}
+      {/*Navigation Menu Items*/}
 
       <NavigationMenu>
         <NavigationMenuList>
