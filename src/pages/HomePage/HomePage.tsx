@@ -1,20 +1,8 @@
 import { Button } from "@/components/ui/button";
-import {
-  Download,
-  Github,
-  Instagram,
-  Linkedin,
-  type LucideIcon,
-} from "lucide-react";
-
+import { Download } from "lucide-react";
+import { SOCIAL_LINKS } from "@/data/socialLinks";
 import { motion } from "framer-motion";
-
 import styles from "./HomePage.module.css";
-
-type SocialLinkIcon = {
-  path: string;
-  icon: LucideIcon;
-};
 
 const container = {
   hidden: {},
@@ -42,15 +30,6 @@ const imageVariant = {
     transition: { duration: 0.9, ease: "easeOut" },
   },
 } as const;
-
-const SOCIAL_LINKS: readonly SocialLinkIcon[] = [
-  { path: "https://github.com/Sakiff", icon: Github },
-  {
-    path: "https://www.linkedin.com/in/sakif-fataliyev-38b460370/",
-    icon: Linkedin,
-  },
-  { path: "https://www.instagram.com/sakif.ftlyv/", icon: Instagram },
-];
 
 const HomePage = () => {
   return (

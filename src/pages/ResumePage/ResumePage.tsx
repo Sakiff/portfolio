@@ -1,28 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { useState, type JSX } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Experience from "@/components/ResumeDetails/Experience";
-import Education from "@/components/ResumeDetails/Education";
-import Skills from "@/components/ResumeDetails/Skills";
-import AboutMe from "@/components/ResumeDetails/AboutMe";
+import { RESUME_ITEMS } from "@/data/resumeItems";
 
 const ResumePage = () => {
-  type ResumeItem = {
-    label: string;
-    key: string;
-    component: JSX.Element;
-  };
-
   const [selected, setSelected] = useState("experience");
 
   const onSelect = (key: string) => setSelected(key);
-
-  const RESUME_ITEMS: ResumeItem[] = [
-    { key: "experience", label: "Experience", component: <Experience /> },
-    { key: "education", label: "Education", component: <Education /> },
-    { key: "skills", label: "Skills", component: <Skills /> },
-    { key: "aboutMe", label: "About me", component: <AboutMe /> },
-  ];
 
   const containerVariant = {
     hidden: { opacity: 0, y: 30 },
