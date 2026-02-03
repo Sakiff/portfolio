@@ -54,4 +54,16 @@ export const WORK_CARDS: WorkCardItem[] = [
     img: "/assets/bizpro.png",
     template: true,
   },
+  {
+    number: "05",
+    title: "Dev Events",
+    description:
+      "DevEvent is a modern web application designed as a central hub for developers to discover and explore tech-focused events such as hackathons, meetups, and conferences.",
+    link: "https://devevents-three-ruby.vercel.app/",
+    repoLink: "https://github.com/Sakiff/devevents-next-app",
+    technologies:
+      "Next.js · React · Tailwind CSS · MongoDB · Mongoose · REST API",
+    img: "/assets/dev_events.png",
+    template: true,
+  },
 ];
