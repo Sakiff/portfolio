@@ -1,6 +1,7 @@
 import { MoveUpRight, type LucideIcon } from "lucide-react";
 import { Link } from "react-router";
 import { motion, MotionValue, useTransform } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 type CardsProps = {
   cardNumber: number;
@@ -21,6 +22,7 @@ const ServicesCard = ({
   targetScale,
   progress,
 }: CardsProps) => {
+  const { t } = useTranslation();
   const scale = useTransform(progress, range, [1, targetScale]);
 
   const darkBgMap: Record<number, string> = {
@@ -93,7 +95,7 @@ const ServicesCard = ({
               transition={{ type: "spring", stiffness: 220, damping: 16 }}
               className="mt-4 md:mt-6 flex items-center gap-2 text-base md:text-lg font-medium"
             >
-              <span>View Work</span>
+              <span>{t("services.viewWork")}</span>
               <MoveUpRight />
             </motion.div>
           </Link>
@@ -105,6 +107,8 @@ const ServicesCard = ({
 
 // Scroll Hint
 const ScrollHint = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="hidden md:flex absolute top-6 right-6 z-20 flex-col items-center gap-2">
       <div className="w-7 h-12 rounded-full border-2 border-black/40 dark:border-white/40 flex items-start justify-center p-1">
@@ -118,7 +122,7 @@ const ScrollHint = () => {
           }}
         />
       </div>
-      <span className="text-xs opacity-60">Scroll</span>
+      <span className="text-xs opacity-60">{t("services.scrollHint")}</span>
     </div>
   );
 };

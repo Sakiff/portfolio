@@ -1,4 +1,5 @@
 import { GraduationCap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 type EducationCardProps = {
   date: string;
@@ -13,6 +14,8 @@ const EducationCard = ({
   institution,
   type = "degree",
 }: EducationCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative border border-border rounded-xl p-6 bg-input/30">
       <span
@@ -32,7 +35,7 @@ const EducationCard = ({
         </div>
 
         <span className="text-xs w-fit rounded-full bg-input/70 px-3 py-1">
-          {type === "bootcamp" ? "Bootcamp" : "Bachelor Degree"}
+          {type === "bootcamp" ? t("education.bootcamp") : t("education.degree")}
         </span>
       </div>
     </div>

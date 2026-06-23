@@ -4,8 +4,10 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
+import { useTranslation } from "react-i18next";
 
 const ServicesPage = () => {
+  const { t } = useTranslation();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -21,6 +23,13 @@ const ServicesPage = () => {
 
   requestAnimationFrame(raf);
 
+  // Merge static card data (icon, number) with translated text
+  const translatedCards = SERVICE_CARDS.map((card, i) => ({
+    ...card,
+    title: t(`services.cards.${i}.title`),
+    text: t(`services.cards.${i}.text`),
+  }));
+
   return (
     <motion.div
       className="px-0 md:px-20 "
@@ -32,7 +41,7 @@ const ServicesPage = () => {
         transition: { duration: 0.7, ease: "easeOut" },
       }}
     >
-      {SERVICE_CARDS.map(({ cardNumber, title, text, icon: Icon }) => (
+      {translatedCards.map(({ cardNumber, title, text, icon: Icon }) => (
         <ServicesCard
           Icon={Icon}
           cardNumber={cardNumber}

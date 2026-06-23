@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import { SOCIAL_LINKS } from "@/data/socialLinks";
 import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
+import { useTranslation } from "react-i18next";
 
 const container = {
   hidden: {},
@@ -32,6 +33,8 @@ const imageVariant = {
 } as const;
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex items-center justify-center pt-0 lg:pt-20">
       <motion.div
@@ -46,7 +49,7 @@ const HomePage = () => {
           variants={container}
         >
           <motion.div className={styles.handUnderlineWrapper} variants={fadeUp}>
-            <span className="relative z-10 text-xl">MERN Stack Developer</span>
+            <span className="relative z-10 text-xl">{t("home.role")}</span>
 
             <svg
               className={styles.handUnderlineSvg}
@@ -65,26 +68,19 @@ const HomePage = () => {
             </svg>
           </motion.div>
           <motion.strong className={styles.fontSize} variants={fadeUp}>
-            Hello I'm
+            {t("home.greeting")}
           </motion.strong>
           <motion.strong
             className={` text-amber-700 ${styles.fontSize}`}
             variants={fadeUp}
           >
-            Sakif
+            {t("home.name")}
           </motion.strong>
           <motion.p
             className="text-lg text-center lg:text-start"
             variants={fadeUp}
           >
-            Frontend developer specializing in
-            <strong className="text-blue-400"> React</strong>, building scalable
-            UI systems with <strong>Tailwind CSS</strong>, crafting smooth
-            animations with{" "}
-            <strong className="text-pink-500">Framer Motion</strong>, and
-            integrating them with{" "}
-            <strong className="text-green-600">Node.js</strong>-powered
-            backends.
+            {t("home.description")}
           </motion.p>
 
           <motion.div
@@ -93,7 +89,7 @@ const HomePage = () => {
           >
             <a href="/cv/sakif_cv.pdf" download>
               <Button variant={"outline"} className="uppercase cursor-pointer">
-                Download CV <Download />
+                {t("home.downloadCv")} <Download />
               </Button>
             </a>
 

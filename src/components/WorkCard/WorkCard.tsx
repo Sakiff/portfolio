@@ -12,6 +12,7 @@ type WorkCardProps = {
   repoLink: string;
   img: string;
   template: boolean;
+  templateLabel?: string;
 };
 
 const WorkCard = ({
@@ -23,6 +24,7 @@ const WorkCard = ({
   technologies,
   img,
   template,
+  templateLabel = "Template",
 }: WorkCardProps) => {
   const fadeUp = {
     hidden: { opacity: 0, y: 24 },
@@ -65,7 +67,7 @@ const WorkCard = ({
               variant="outline"
               className="bg-input/50 absolute top-0 right-2"
             >
-              Template
+              {templateLabel}
             </Badge>
           )}
         </div>
@@ -78,7 +80,7 @@ const WorkCard = ({
         <p className="text-muted-foreground text-sm line-clamp-3">
           {description}
         </p>
-        <span className="text-xs uppercase tracking-widest ">
+        <span className="text-xs uppercase tracking-widest">
           {technologies}
         </span>
         <Separator orientation="horizontal" />
