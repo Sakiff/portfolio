@@ -10,8 +10,8 @@ const az = {
   // HomePage
   home: {
     role: "MERN Stack Tərtibatçısı",
-    greeting: "Salam, mən",
-    name: "Sakifəm",
+    greeting: "Salam, mənim adım",
+    name: "Sakifdir",
     description:
       "React üzrə ixtisaslaşmış frontend tərtibatçısı — Tailwind CSS ilə miqyaslana bilən UI sistemləri qurur, Framer Motion ilə rəvan animasiyalar yaradır və Node.js əsaslı backendlərə inteqrasiya edir.",
     downloadCv: "CV-ni Yüklə",
