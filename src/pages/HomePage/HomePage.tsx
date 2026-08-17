@@ -87,7 +87,7 @@ const HomePage = () => {
             className="flex items-center justify-center gap-3"
             variants={fadeUp}
           >
-            <a href="/cv/sakif_cv.pdf" download>
+            <a href="/cv/sakif_cv.pdf" download="Sakif_Fataliyev_CV.pdf">
               <Button variant={"outline"} className="uppercase cursor-pointer">
                 {t("home.downloadCv")} <Download />
               </Button>
