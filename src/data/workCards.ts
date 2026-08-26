@@ -23,6 +23,28 @@ export const WORK_CARDS: WorkCardItem[] = [
   },
   {
     number: "02",
+    title: "Piper",
+    description:
+      "A modern corporate website developed for Imperia Group, an IT solutions provider. The project focuses entirely on frontend development, delivering a clean, responsive, and visually engaging user interface to clearly present the company's services and expertise. This website showcases advanced React components, smooth animations, and a user-centric design that enhances the overall user experience.",
+    link: "https://piper-website-nine.vercel.app",
+    repoLink: "https://github.com/Sakiff/piper-website",
+    technologies: "Next.js · Tailwind ",
+    img: "/assets/piper.png",
+    template: false,
+  },
+  {
+    number: "03",
+    title: "Bərdə Hazırlıq Kursları",
+    description:
+      "A modern educational platform developed for Bərdə Hazırlıq Kursları, designed to provide students with information about courses, programs, and educational opportunities.",
+    link: "https://berdehazirliqkurslari.com/",
+    repoLink: "https://github.com/Sakiff/bhk",
+    technologies: "HTML5 · CSS3 · Tailwind · JavaScript · React · Node.js ",
+    img: "/assets/bhk.png",
+    template: false,
+  },
+  {
+    number: "04",
     title: "Sum Tekstil",
     description:
       "A full-stack corporate website built for Sum Tekstil, focused on product presentation and brand identity. The project demonstrates backend development skills through API design, data handling, and server-side logic powering a responsive user interface. It includes features like product catalogs, contact forms, and admin panels for content management.",
@@ -33,7 +55,7 @@ export const WORK_CARDS: WorkCardItem[] = [
     template: false,
   },
   {
-    number: "03",
+    number: "05",
     title: "HR kursları",
     description:
       "A frontend-focused website developed for HR Courses, built with React, Tailwind CSS, and modern UI animations. The project demonstrates component-based architecture, responsive design, and interactive elements to effectively showcase training programs and course information. It features course listings, enrollment forms, and testimonial sections.",
@@ -44,7 +66,7 @@ export const WORK_CARDS: WorkCardItem[] = [
     template: false,
   },
   {
-    number: "04",
+    number: "06",
     title: "BizPro Media",
     description:
       "The BizPro Media template website is a frontend-only project built with HTML and CSS. It demonstrates responsive design, structured layouts, and attention to visual detail for showcasing media content effectively. This template can be used as a starting point for media-related websites, including blogs, portfolios, and news sites.",
@@ -55,14 +77,14 @@ export const WORK_CARDS: WorkCardItem[] = [
     template: true,
   },
   {
-    number: "05",
+    number: "07",
     title: "Dev Events",
     description:
       "DevEvent is a modern web application designed as a central hub for developers to discover and explore tech-focused events such as hackathons, meetups, and conferences.",
     link: "https://devevents-three-ruby.vercel.app/",
     repoLink: "https://github.com/Sakiff/devevents-next-app",
     technologies:
-      "Next.js · React · Tailwind CSS · MongoDB · Mongoose · REST API",
+      "Next.js · Tailwind · MongoDB · Mongoose · REST API",
     img: "/assets/dev_events.png",
     template: true,
   },
