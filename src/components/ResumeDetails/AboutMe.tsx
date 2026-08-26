@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 
 const PERSONAL_KEYS = [
   "Name",
-  "Experience",
   "Nationality",
   "Phone",
   "Email",

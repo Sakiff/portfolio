@@ -9,7 +9,7 @@ const az = {
 
   // HomePage
   home: {
-    role: "MERN Stack Tərtibatçısı",
+    role: "Proqram Təminatı Tərtibatçısı",
     greeting: "Salam, mənim adım",
     name: "Sakifdir",
     description:
@@ -24,7 +24,7 @@ const az = {
     cards: [
       {
         title: "Veb Tərtibat",
-        text: "Frontend-dən backend-ə qədər MERN stack istifadə edərək miqyaslana bilən və etibarlı veb tətbiqlər inkişaf etdirirəm. Təmiz arxitektura, saxlanıla bilən kod və problemsiz API inteqrasiyaları həmişə prioritetdir.",
+        text: "Frontend-dən backend-ə qədər müasir veb texnologiyalarından istifadə edərək miqyaslana bilən və etibarlı veb tətbiqlər inkişaf etdirirəm. Təmiz arxitektura, saxlanıla bilən kod və problemsiz API inteqrasiyaları həmişə prioritetdir.",
       },
       {
         title: "UI/UX Tətbiqi",
@@ -57,11 +57,11 @@ const az = {
     heading: "Mənim Təcrübəm",
     subheading:
       "Real layihələr və produksiya səviyyəsindəki inkişaf vasitəsilə əldə edilmiş praktiki frontend təcrübəsi.",
-    date: "Mart 2024 — İndiyə qədər",
+    date: "Mart 2025 — May 2026",
     role: "Frontend Tərtibatçısı",
     company: "Imperia Groups MMC",
     description:
-      "React, Tailwind CSS və müasir frontend praktikalarından istifadə edərək responsiv və interaktiv istifadəçi interfeysləri qururam. Təmiz kod, performans və rəvan istifadəçi təcrübəsinə diqqət yetirirəm.",
+      "React, Tailwind CSS və müasir frontend praktikalarından istifadə edərək responsiv və interaktiv istifadəçi interfeysləri qurdum. Təmiz kod, performans və rəvan istifadəçi təcrübəsinə diqqət yetirdim.",
   },
 
   // Education
@@ -73,14 +73,14 @@ const az = {
     bootcamp: "Bootcamp",
     items: [
       {
-        date: "2022 — 2026 (Gözlənilir)",
+        date: "2022 — 2026",
         title: "İnformasiya Texnologiyaları",
         institution: "Azərbaycan Texniki Universiteti",
         type: "degree",
       },
       {
         date: "2022 — 2023",
-        title: "MERN Stack Tərtibatı",
+        title: "Proqram Təminatının Hazırlanması",
         institution: "Code Academy",
         type: "bootcamp",
       },
@@ -101,7 +101,6 @@ const az = {
       "Peşəkar məqsədlər üçün aktual şəxsi məlumatlar və əlaqə informasiyası.",
     labels: {
       Name: "Ad",
-      Experience: "Təcrübə",
       Nationality: "Milliyyət",
       Phone: "Telefon",
       Email: "E-poçt",
@@ -109,7 +108,6 @@ const az = {
     },
     values: {
       Name: "Sakif Fətaliyev",
-      Experience: "3+ İl",
       Nationality: "Azərbaycanlı",
       Phone: "+994 (50) 585-32-67",
       Email: "ftliyevsakif@gmail.com",

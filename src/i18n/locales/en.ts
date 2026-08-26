@@ -9,7 +9,7 @@ const en = {
 
   // HomePage
   home: {
-    role: "MERN Stack Developer",
+    role: "Software Developer",
     greeting: "Hello I'm",
     name: "Sakif",
     description:
@@ -24,7 +24,7 @@ const en = {
     cards: [
       {
         title: "Web Development",
-        text: "From frontend to backend, I develop scalable and secure web applications using the MERN stack. Clean architecture, maintainable code, and seamless API integrations are always a priority.",
+        text: "From frontend to backend, I develop scalable and secure web applications using modern web technologies. Clean architecture, maintainable code, and seamless API integrations are always a priority.",
       },
       {
         title: "UI/UX Implementation",
@@ -57,11 +57,11 @@ const en = {
     heading: "My Experience",
     subheading:
       "Practical frontend experience gained through real-world projects and production-level development.",
-    date: "March 2024 — Present",
+    date: "March 2025 — May 2026",
     role: "Frontend Developer",
     company: "Imperia Groups MMC",
     description:
-      "Building responsive and interactive user interfaces using React, Tailwind CSS, and modern frontend practices. Focused on clean code, performance, and smooth user experience.",
+      "Built responsive and interactive user interfaces using React, Tailwind CSS, and modern frontend practices. Focused on clean code, performance, and smooth user experience.",
   },
 
   // Education
@@ -73,14 +73,14 @@ const en = {
     bootcamp: "Bootcamp",
     items: [
       {
-        date: "2022 — 2026 (Expected)",
+        date: "2022 — 2026",
         title: "Information Technologies",
         institution: "Azerbaijan Technical University",
         type: "degree",
       },
       {
         date: "2022 — 2023",
-        title: "MERN Stack Development",
+        title: "Software Development",
         institution: "Code Academy",
         type: "bootcamp",
       },
@@ -101,7 +101,6 @@ const en = {
       "Personal details and contact information relevant for professional purposes.",
     labels: {
       Name: "Name",
-      Experience: "Experience",
       Nationality: "Nationality",
       Phone: "Phone",
       Email: "Email",
@@ -109,7 +108,6 @@ const en = {
     },
     values: {
       Name: "Sakif Fataliyev",
-      Experience: "3+ Years",
       Nationality: "Azerbaijanian",
       Phone: "+994 (50) 585-32-67",
       Email: "ftliyevsakif@gmail.com",

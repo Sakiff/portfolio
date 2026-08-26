@@ -17,7 +17,7 @@ export const SERVICE_CARDS: readonly servicesItem[] = [
   {
     cardNumber: 0,
     title: "Web Development",
-    text: "From frontend to backend, I develop scalable and secure web applications using the MERN stack. Clean architecture, maintainable code, and seamless API integrations are always a priority.",
+    text: "From frontend to backend, I develop scalable and secure web applications using modern web technologies. Clean architecture, maintainable code, and seamless API integrations are always a priority.",
     icon: CodeXml,
   },
   {
