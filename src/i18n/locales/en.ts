@@ -126,6 +126,14 @@ const en = {
       },
       {
         description:
+          "A landing page for Piper, a mobile service-marketplace app that connects users with verified local tradespeople across 50+ home and office service categories, from plumbing and electrical work to repairs and cleaning. Users send a request, track the job status in real time, and pay the tradesperson directly. Built with Next.js and Tailwind CSS for a clean, responsive experience.",
+      },
+      {
+        description:
+          "A modern educational platform built for Bərdə Hazırlıq Kursları, an exam-preparation and tutoring center. The site presents the center's course offerings, including university entrance prep, technical school prep, and skill-improvement programs, along with exam results, achievements, and news for students and parents.",
+      },
+      {
+        description:
           "A full-stack corporate website built for Sum Tekstil, focused on product presentation and brand identity. The project demonstrates backend development skills through API design, data handling, and server-side logic powering a responsive user interface. It includes features like product catalogs, contact forms, and admin panels for content management.",
       },
       {
@@ -135,10 +143,6 @@ const en = {
       {
         description:
           "The BizPro Media template website is a frontend-only project built with HTML and CSS. It demonstrates responsive design, structured layouts, and attention to visual detail for showcasing media content effectively. This template can be used as a starting point for media-related websites, including blogs, portfolios, and news sites.",
-      },
-      {
-        description:
-          "DevEvent is a modern web application designed as a central hub for developers to discover and explore tech-focused events such as hackathons, meetups, and conferences.",
       },
     ],
   },

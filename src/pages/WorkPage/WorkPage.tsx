@@ -22,8 +22,9 @@ const WorkPage = () => {
               i
             ) => (
               <div
-                className="transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded-lg overflow-hidden bg-card border"
+                className="transition-transform duration-300 hover:scale-105 hover:shadow-lg rounded-lg overflow-hidden bg-card border cursor-pointer"
                 key={number}
+                onClick={() => window.open(link, "_blank", "noopener,noreferrer")}
               >
                 <WorkCard
                   title={title}

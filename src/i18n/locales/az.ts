@@ -126,6 +126,14 @@ const az = {
       },
       {
         description:
+          "Piper — 50-dən çox məişət və ofis xidməti kateqoriyası üzrə istifadəçiləri yaxınlıqdakı təsdiqlənmiş ustalarla birləşdirən mobil xidmət platformasının açılış səhifəsi. Santexnikadan elektrik işlərinə, təmirdən təmizliyə qədər istifadəçilər sorğu göndərir, işin statusunu real vaxtda izləyir və ödənişi birbaşa ustaya edir. Next.js və Tailwind CSS ilə hazırlanmış təmiz, responsiv interfeys.",
+      },
+      {
+        description:
+          "Bərdə Hazırlıq Kursları — bir imtahana hazırlıq və repetitorluq mərkəzi üçün hazırlanmış müasir təhsil platforması. Sayt tədris mərkəzinin təklif etdiyi kursları — abituriyent hazırlığı, texnikumlara hazırlıq və təkmilləşdirmə proqramlarını — imtahan nəticələri, uğurlar və xəbərlərlə birlikdə şagird və valideynlərə təqdim edir.",
+      },
+      {
+        description:
           "Sum Tekstil üçün məhsul təqdimatı və brend kimliyi üzərində fokuslanmış tam stekli korporativ vebsayt. Layihə API dizaynı, məlumat idarəetməsi və responsiv interfeysi gücləndirən server tərəfi məntiqi vasitəsilə backend inkişaf bacarıqlarını nümayiş etdirir.",
       },
       {
@@ -135,10 +143,6 @@ const az = {
       {
         description:
           "BizPro Media şablon vebsaytı HTML və CSS ilə hazırlanmış yalnız frontend layihəsidir. Media məzmununu effektiv şəkildə nümayiş etdirmək üçün responsiv dizayn, strukturlaşdırılmış düzümlər və vizual detallara diqqəti nümayiş etdirir.",
-      },
-      {
-        description:
-          "DevEvent — tərtibatçıların hakatонlar, görüşlər və konfranslar kimi texnologiya yönümlü tədbirləri kəşf etməsi üçün mərkəzi platforma kimi hazırlanmış müasir veb tətbiqdir.",
       },
     ],
   },
