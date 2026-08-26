@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 import { SOCIAL_LINKS } from "@/data/socialLinks";
 import { motion } from "framer-motion";
 import styles from "./HomePage.module.css";
