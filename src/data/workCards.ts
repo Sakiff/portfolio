@@ -4,7 +4,7 @@ export type WorkCardItem = {
   description: string;
   technologies: string;
   link: string;
-  repoLink: string;
+  repoLink?: string;
   img: string;
   template: boolean;
 };
@@ -38,8 +38,7 @@ export const WORK_CARDS: WorkCardItem[] = [
     description:
       "A modern educational platform developed for Bərdə Hazırlıq Kursları, designed to provide students with information about courses, programs, and educational opportunities.",
     link: "https://berdehazirliqkurslari.com/",
-    repoLink: "https://github.com/Sakiff/bhk",
-    technologies: "HTML5 · CSS3 · Tailwind · JavaScript · React · Node.js ",
+    technologies: "Next.js · Tailwind",
     img: "/assets/bhk.png",
     template: false,
   },

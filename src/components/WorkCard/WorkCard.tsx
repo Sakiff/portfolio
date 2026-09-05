@@ -9,7 +9,7 @@ type WorkCardProps = {
   description: string;
   technologies: string;
   link: string;
-  repoLink: string;
+  repoLink?: string;
   img: string;
   template: boolean;
   templateLabel?: string;
@@ -90,15 +90,17 @@ const WorkCard = ({
               <Link size={16} />
             </div>
           </a>
-          <a
-            href={repoLink}
-            target="_blank"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="bg-input/70 border-2 border-border rounded-full p-3 cursor-pointer hover:bg-input transition-colors">
-              <Github size={16} />
-            </div>
-          </a>
+          {repoLink && (
+            <a
+              href={repoLink}
+              target="_blank"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="bg-input/70 border-2 border-border rounded-full p-3 cursor-pointer hover:bg-input transition-colors">
+                <Github size={16} />
+              </div>
+            </a>
+          )}
         </div>
       </motion.div>
     </motion.div>
