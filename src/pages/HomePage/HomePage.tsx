@@ -110,9 +110,9 @@ const HomePage = () => {
           animate="visible"
         >
           <img
-            src="/assets/hero_image.jpeg"
+            src="/assets/hero_image.jpg"
             alt="profile_photo"
-            className="w-full h-full "
+            className={`w-full h-full ${styles.heroImage}`}
           />
         </motion.div>
       </motion.div>
