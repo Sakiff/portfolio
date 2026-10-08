@@ -1,16 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Languages, Check } from "lucide-react";
 
 const LANGUAGES = [
-  { code: "en", label: "EN", fullLabel: "English" },
-  { code: "az", label: "AZ", fullLabel: "Azərbaycan" },
+  { code: "en", label: "EN" },
+  { code: "az", label: "AZ" },
 ] as const;
 
 const LangToggle = () => {
@@ -22,39 +14,27 @@ const LangToggle = () => {
     localStorage.setItem("i18n-lang", code);
   };
 
-  const current = LANGUAGES.find((l) => l.code === currentLang) ?? LANGUAGES[0];
-
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="sm"
-          className="cursor-pointer flex items-center gap-1.5 px-3 h-9 font-medium"
-          aria-label="Select language"
+    <div
+      className="flex h-10 items-center rounded-full border border-border bg-tile p-1"
+      role="group"
+      aria-label="Select language"
+    >
+      {LANGUAGES.map(({ code, label }) => (
+        <button
+          key={code}
+          onClick={() => handleChange(code)}
+          aria-pressed={currentLang === code}
+          className={`h-full cursor-pointer rounded-full px-3 font-mono text-xs font-medium transition-colors ${
+            currentLang === code
+              ? "bg-ink text-ink-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
         >
-          <Languages className="h-4 w-4 shrink-0" />
-          <span className="text-sm">{current.label}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[130px]">
-        {LANGUAGES.map(({ code, label, fullLabel }) => (
-          <DropdownMenuItem
-            key={code}
-            onClick={() => handleChange(code)}
-            className="flex items-center justify-between cursor-pointer"
-          >
-            <span>
-              <span className="font-semibold mr-2">{label}</span>
-              <span className="text-muted-foreground text-xs">{fullLabel}</span>
-            </span>
-            {currentLang === code && (
-              <Check className="h-3.5 w-3.5 text-accent ml-2 shrink-0" />
-            )}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+          {label}
+        </button>
+      ))}
+    </div>
   );
 };
 

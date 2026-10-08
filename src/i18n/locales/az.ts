@@ -15,28 +15,57 @@ const az = {
     description:
       "React üzrə ixtisaslaşmış frontend tərtibatçısı — Tailwind CSS ilə miqyaslana bilən UI sistemləri qurur, Framer Motion ilə rəvan animasiyalar yaradır və Node.js əsaslı backendlərə inteqrasiya edir.",
     downloadCv: "CV-ni Yüklə",
+    available: "İşə açığam",
+    basedIn: "Yaşadığım yer",
+    location: "Bakı, Azərbaycan",
+    localTime: "yerli vaxt",
+    stack: "Texnologiyalar",
+    latestWork: "Son iş",
+    viewAll: "Hamısına bax",
+    whatIDo: "Nə edirəm",
+    experience: "Təcrübə",
+    contactTitle: "Ağlınızda bir layihə var?",
+    contactText: "Frilans işlərə və tam ştat vəzifələrə açığam. Mənə yazın, bir gün ərzində cavab verəcəyəm.",
+    contactCta: "WhatsApp-da yaz",
+    whatsappMessage: "Salam Sakif, portfolionuzla tanış oldum və sizinlə potensial bir layihəni müzakirə etmək istərdim. Qısa bir söhbət üçün nə vaxt uyğun olduğunuzu bildirə bilərsinizmi?",
+    copyEmail: "E-poçtu kopyala",
+    copied: "Kopyalandı",
+    elsewhere: "Sosial şəbəkələr",
+  },
+
+  // Footer
+  footer: {
+    rights: "Bütün hüquqlar qorunur.",
+    backToTop: "Yuxarı qayıt",
   },
 
   // ServicesPage
   services: {
     viewWork: "İşlərə Bax",
     scrollHint: "Sürüşdür",
+    heading: "Xidmətlər",
+    subheading: "İlk eskizdən tutmuş sürətli və səliqəli işləyən sayta qədər sizə necə kömək edə bilərəm.",
+    ctaTitle: "Bəyəndiniz?",
     cards: [
       {
-        title: "Veb Tərtibat",
-        text: "Frontend-dən backend-ə qədər müasir veb texnologiyalarından istifadə edərək miqyaslana bilən və etibarlı veb tətbiqlər inkişaf etdirirəm. Təmiz arxitektura, saxlanıla bilən kod və problemsiz API inteqrasiyaları həmişə prioritetdir.",
+        title: "Frontend Tərtibatı",
+        text: "React və Next.js ilə sürətli, responsiv saytlar.",
       },
       {
-        title: "UI/UX Tətbiqi",
-        text: "Dizaynları piksel-mükəmməl, interaktiv təcrübələrə çevirirəm. Məsafə, hərəkət və istifadə rahatlığına diqqət edərək son məhsulun hamar, təbii və istifadəçi dostu hiss etdirməsini təmin edirəm.",
+        title: "SEO və Performans Optimallaşdırması",
+        text: "Google-da daha yüksək mövqe və dərhal açılan səhifələr.",
       },
       {
-        title: "Vebsayt Performans Optimallaşdırması",
-        text: "Vebsaytları sürət, SEO və responsivlik üçün optimallaşdırıram. Nəticədə daha sürətli yüklənmə müddəti, daha yaxşı Lighthouse göstəriciləri və yaxşılaşdırılmış istifadəçi cəlbi əldə olunur.",
+        title: "Full-Stack Veb Tətbiqlər",
+        text: "Node.js, Express və MongoDB ilə tam veb tətbiqlər.",
       },
       {
-        title: "API İnteqrasiyası və Backend Məntiqi",
-        text: "REST API-ləri inteqrasiya edir və lazım olduqda Node.js və .NET ilə backend məntiqi qururum — sistemlər arasında etibarlı məlumat mübadiləsi və hamar əlaqəni təmin edirəm.",
+        title: "Admin Panellər və Məzmun İdarəetməsi",
+        text: "Məhsul, xəbər və səhifələrinizi özünüz idarə edin.",
+      },
+      {
+        title: "Real-time Funksiyalar və İnteqrasiyalar",
+        text: "Canlı çat, bildirişlər, Google ilə giriş və fayl yükləmə.",
       },
     ],
   },
@@ -92,6 +121,17 @@ const az = {
     heading: "Mənim Bacarıqlarım",
     subheading:
       "Etibarlı, saxlanıla bilən və müasir veb tətbiqləri qurmaq üçün aktiv istifadə etdiyim texnologiya və alətlər toplusu.",
+    groups: {
+      frontend: "Frontend",
+      ui: "UI kitabxanaları",
+      state: "State və formlar",
+      routing: "Routing",
+      animation: "Animasiya",
+      backend: "Backend",
+      integrations: "İnteqrasiyalar",
+      tools: "Alətlər və test",
+      practices: "Ümumi praktikalar",
+    },
   },
 
   // About Me
@@ -118,15 +158,26 @@ const az = {
   // WorkPage
   work: {
     heading: "Mənim İşlərim",
+    subheading: "Real müştərilər üçün hazırladığım saytlardan və bir neçə şablondan seçmələr.",
+    projects: "Layihə",
+    live: "Sayta bax",
+    code: "Kod",
+    back: "Bütün işlər",
+    viewDetails: "Ətraflı bax",
+    type: "Növ",
+    clientProject: "Müştəri layihəsi",
+    private: "Qapalı layihə",
+    privateNote: "Qapalı sistem, ictimaiyyətə açıq deyil",
+    website: "Sayt",
+    stack: "Texnologiyalar",
+    pages: "Ekran görüntüləri",
+    nextProject: "Növbəti layihə",
+    prevProject: "Əvvəlki layihə",
     template: "Şablon",
     cards: [
       {
         description:
-          "IT həlləri təminatçısı olan Imperia Group üçün hazırlanmış müasir korporativ vebsayt. Layihə tamamilə frontend inkişafına yönəlmiş olub şirkətin xidmət və ekspertizasını aydın şəkildə təqdim etmək üçün təmiz, responsiv və vizual cəhətdən cəlbedici interfeys təqdim edir.",
-      },
-      {
-        description:
-          "Piper — 50-dən çox məişət və ofis xidməti kateqoriyası üzrə istifadəçiləri yaxınlıqdakı təsdiqlənmiş ustalarla birləşdirən mobil xidmət platformasının açılış səhifəsi. Santexnikadan elektrik işlərinə, təmirdən təmizliyə qədər istifadəçilər sorğu göndərir, işin statusunu real vaxtda izləyir və ödənişi birbaşa ustaya edir. Next.js və Tailwind CSS ilə hazırlanmış təmiz, responsiv interfeys.",
+          "BHK Hesabat — Bərdə Hazırlıq Kursları üçün hazırlanmış qapalı maliyyə hesabatı sistemi. Bütün korpuslar üzrə şagirdləri, müəllimləri, təhsil haqqı ödənişlərini, maaşları və imtahan gəlirlərini izləyir; aylıq gəlir və xərclər üçün qrafikli icmal panelləri, işçilər üçün rol əsaslı giriş və müqavilə yükləmə imkanı var. Next.js, TypeScript, MongoDB və Cloudinary ilə hazırlanıb.",
       },
       {
         description:
@@ -135,6 +186,14 @@ const az = {
       {
         description:
           "Sum Tekstil üçün məhsul təqdimatı və brend kimliyi üzərində fokuslanmış tam stekli korporativ vebsayt. Layihə API dizaynı, məlumat idarəetməsi və responsiv interfeysi gücləndirən server tərəfi məntiqi vasitəsilə backend inkişaf bacarıqlarını nümayiş etdirir.",
+      },
+      {
+        description:
+          "IT həlləri təminatçısı olan Imperia Group üçün hazırlanmış müasir korporativ vebsayt. Layihə tamamilə frontend inkişafına yönəlmiş olub şirkətin xidmət və ekspertizasını aydın şəkildə təqdim etmək üçün təmiz, responsiv və vizual cəhətdən cəlbedici interfeys təqdim edir.",
+      },
+      {
+        description:
+          "Piper — 50-dən çox məişət və ofis xidməti kateqoriyası üzrə istifadəçiləri yaxınlıqdakı təsdiqlənmiş ustalarla birləşdirən mobil xidmət platformasının açılış səhifəsi. Santexnikadan elektrik işlərinə, təmirdən təmizliyə qədər istifadəçilər sorğu göndərir, işin statusunu real vaxtda izləyir və ödənişi birbaşa ustaya edir. Next.js və Tailwind CSS ilə hazırlanmış təmiz, responsiv interfeys.",
       },
       {
         description:

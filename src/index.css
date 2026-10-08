@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -11,6 +14,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -29,99 +33,100 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Bento-specific tokens */
+  --color-tile: var(--tile);
+  --color-tile-hover: var(--tile-hover);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-lime: var(--lime);
+  --color-lime-foreground: var(--lime-foreground);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(66.557% 0.1691 52.898 / 0.826);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(58.587% 0.21745 38.79);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(66.6% 0.179 58.318);
-  --input: oklch(66.557% 0.1691 52.898 / 0.614);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.75rem;
+
+  --background: #efeee9;
+  --foreground: #141414;
+  --tile: #ffffff;
+  --tile-hover: #fafaf7;
+  --ink: #141414;
+  --ink-foreground: #f4f4ef;
+  --lime: #d4f04a;
+  --lime-foreground: #141414;
+
+  --card: var(--tile);
+  --card-foreground: var(--foreground);
+  --popover: #ffffff;
+  --popover-foreground: var(--foreground);
+  --primary: #141414;
+  --primary-foreground: #f4f4ef;
+  --secondary: #e6e5df;
+  --secondary-foreground: #141414;
+  --muted: #e6e5df;
+  --muted-foreground: #6b6a64;
+  --accent: #ecebe5;
+  --accent-foreground: #141414;
+  --destructive: #d93b3b;
+  --border: #e2e1da;
+  --input: #e2e1da;
+  --ring: #a3a29b;
 }
 
 .dark {
-  --background: oklch(16.376% 0.00002 271.152);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(47.467% 0.13574 44.969 / 0.951);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(69.587% 0.21745 38.79);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(47.3% 0.137 46.201);
-  --input: oklch(47.3% 0.137 46.201);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #0b0b0b;
+  --foreground: #f1f1ec;
+  --tile: #161616;
+  --tile-hover: #1b1b1b;
+  --ink: #f1f1ec;
+  --ink-foreground: #111111;
+  --lime: #d4f04a;
+  --lime-foreground: #141414;
+
+  --card: var(--tile);
+  --card-foreground: var(--foreground);
+  --popover: #1a1a1a;
+  --popover-foreground: var(--foreground);
+  --primary: #f1f1ec;
+  --primary-foreground: #111111;
+  --secondary: #222222;
+  --secondary-foreground: #f1f1ec;
+  --muted: #222222;
+  --muted-foreground: #8f8f88;
+  --accent: #232323;
+  --accent-foreground: #f1f1ec;
+  --destructive: #e05555;
+  --border: #242424;
+  --input: #2a2a2a;
+  --ring: #555555;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.3s ease;
+  }
+  ::selection {
+    background: var(--lime);
+    color: var(--lime-foreground);
   }
 }
 
-.active {
-  color: var(--accent);
+@layer components {
+  /* The base bento tile */
+  .tile {
+    @apply relative overflow-hidden rounded-[28px] border border-border bg-tile p-6 transition-colors duration-300;
+  }
+  .tile-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground;
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-xs font-medium;
+  }
 }

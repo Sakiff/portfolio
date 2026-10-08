@@ -1,109 +1,118 @@
-import { Github, Link } from "lucide-react";
-import { Separator } from "../ui/separator";
-import { Badge } from "../ui/badge";
-import { motion } from "framer-motion";
+import { Link } from "react-router";
+import { ArrowUpRight, Github, Lock } from "lucide-react";
+import Tile from "@/components/Bento/Tile";
+import { cn } from "@/lib/utils";
+import { splitTechs } from "@/data/workCards";
 
 type WorkCardProps = {
+  index: number;
+  className?: string;
+  slug: string;
   number: string;
   title: string;
   description: string;
   technologies: string;
-  link: string;
+  link?: string;
   repoLink?: string;
   img: string;
   template: boolean;
-  templateLabel?: string;
+  templateLabel: string;
+  liveLabel: string;
+  codeLabel: string;
+  detailsLabel: string;
+  privateLabel: string;
 };
 
 const WorkCard = ({
+  index,
+  className,
+  slug,
+  number,
   title,
   description,
-  link,
-  number,
-  repoLink,
   technologies,
+  link,
+  repoLink,
   img,
   template,
-  templateLabel = "Template",
+  templateLabel,
+  liveLabel,
+  codeLabel,
+  detailsLabel,
+  privateLabel,
 }: WorkCardProps) => {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { ease: "easeOut", duration: 0.6 },
-    },
-  } as const;
-
-  const container = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="flex flex-col gap-5 p-6"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
+    <Tile index={index} className={cn("group flex flex-col gap-6 p-3", className)}>
       {/* Image */}
-      <motion.div
-        className="w-full h-48 rounded-xl overflow-hidden"
-        variants={fadeUp}
+      <Link
+        to={`/work/${slug}`}
+        className="relative block aspect-[16/10] shrink-0 overflow-hidden rounded-[20px] bg-muted"
       >
-        <img src={img} alt={title} className="object-cover w-full h-full" />
-      </motion.div>
+        <img
+          src={img}
+          alt={title}
+          loading="lazy"
+          className="absolute inset-0 size-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+        <span className="absolute top-4 left-4 rounded-full bg-tile/90 px-3 py-1 font-mono text-xs backdrop-blur-md">
+          {number}
+        </span>
+        {template && (
+          <span className="absolute top-4 right-4 rounded-full bg-lime px-3 py-1 text-xs font-medium text-lime-foreground">
+            {templateLabel}
+          </span>
+        )}
+      </Link>
 
       {/* Content */}
-      <motion.div className="flex flex-col gap-4" variants={fadeUp}>
-        <div className="relative flex-1">
-          {template && (
-            <Badge
-              variant="outline"
-              className="bg-input/50 absolute top-0 right-2"
-            >
-              {templateLabel}
-            </Badge>
-          )}
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-muted-foreground">
-            {number}
-          </span>
-          <h1 className="text-2xl font-semibold">{title}</h1>
-        </div>
-        <p className="text-muted-foreground text-sm line-clamp-3">
+      <div className="flex flex-1 flex-col gap-4 px-4 pb-4">
+        <Link to={`/work/${slug}`} className="w-fit">
+          <h2 className="text-3xl font-semibold tracking-tight">{title}</h2>
+        </Link>
+        <p className="line-clamp-3 leading-relaxed text-muted-foreground">
           {description}
         </p>
-        <span className="text-xs uppercase tracking-widest">
-          {technologies}
-        </span>
-        <Separator orientation="horizontal" />
-        <div className="flex items-center justify-start gap-4">
-          <a href={link} target="_blank" onClick={(e) => e.stopPropagation()}>
-            <div className="bg-input/70 border-2 border-border rounded-full p-3 cursor-pointer hover:bg-input transition-colors">
-              <Link size={16} />
-            </div>
-          </a>
+        <div className="flex flex-wrap gap-1.5">
+          {splitTechs(technologies).map((tech) => (
+            <span key={tech} className="pill bg-background py-0.5">
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="mt-auto flex flex-wrap items-center gap-2 pt-2">
+          <Link
+            to={`/work/${slug}`}
+            className="inline-flex h-11 items-center gap-1.5 rounded-full bg-ink px-5 text-sm font-medium text-ink-foreground transition-transform hover:-translate-y-0.5"
+          >
+            {detailsLabel} <ArrowUpRight size={15} />
+          </Link>
+          {link ? (
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-11 items-center gap-1.5 rounded-full border border-border px-5 text-sm font-medium transition-colors hover:bg-accent"
+            >
+              {liveLabel}
+            </a>
+          ) : (
+            <span className="inline-flex h-11 items-center gap-1.5 rounded-full border border-border px-5 text-sm font-medium text-muted-foreground">
+              <Lock size={14} /> {privateLabel}
+            </span>
+          )}
           {repoLink && (
             <a
               href={repoLink}
               target="_blank"
-              onClick={(e) => e.stopPropagation()}
+              rel="noreferrer"
+              className="inline-flex h-11 items-center gap-1.5 rounded-full border border-border px-5 text-sm font-medium transition-colors hover:bg-accent"
             >
-              <div className="bg-input/70 border-2 border-border rounded-full p-3 cursor-pointer hover:bg-input transition-colors">
-                <Github size={16} />
-              </div>
+              <Github size={15} /> {codeLabel}
             </a>
           )}
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </Tile>
   );
 };
 

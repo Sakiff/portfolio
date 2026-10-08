@@ -1,10 +1,24 @@
-import { Outlet } from "react-router";
+import { Suspense, useEffect } from "react";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
+
 const Root = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className="px-10 py-5">
+    <div className="mx-auto max-w-6xl px-3 pt-4 sm:px-5">
       <Navbar />
-      <Outlet />
+      <main>
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <Outlet />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 };

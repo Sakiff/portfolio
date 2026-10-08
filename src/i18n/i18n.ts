@@ -24,4 +24,11 @@ i18n
     },
   });
 
+// Keep <html lang> in sync so CSS `uppercase` uses Azerbaijani casing (i → İ).
+const syncLang = (lng: string) => {
+  document.documentElement.lang = lng.startsWith("az") ? "az" : "en";
+};
+syncLang(i18n.language ?? "en");
+i18n.on("languageChanged", syncLang);
+
 export default i18n;

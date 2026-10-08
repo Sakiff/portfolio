@@ -15,28 +15,57 @@ const en = {
     description:
       "Frontend developer specializing in React, building scalable UI systems with Tailwind CSS, crafting smooth animations with Framer Motion, and integrating them with Node.js-powered backends.",
     downloadCv: "Download CV",
+    available: "Available for work",
+    basedIn: "Based in",
+    location: "Baku, Azerbaijan",
+    localTime: "local time",
+    stack: "Tech stack",
+    latestWork: "Latest work",
+    viewAll: "View all",
+    whatIDo: "What I do",
+    experience: "Experience",
+    contactTitle: "Have a project in mind?",
+    contactText: "I'm open to freelance work and full-time roles. Drop me a line and I'll reply within a day.",
+    contactCta: "Let's talk on WhatsApp",
+    whatsappMessage: "Hello Sakif, I came across your portfolio and would like to discuss a potential project with you. Could you let me know when you are available for a brief conversation?",
+    copyEmail: "Copy email",
+    copied: "Copied",
+    elsewhere: "Elsewhere",
+  },
+
+  // Footer
+  footer: {
+    rights: "All rights reserved.",
+    backToTop: "Back to top",
   },
 
   // ServicesPage
   services: {
     viewWork: "View Work",
     scrollHint: "Scroll",
+    heading: "Services",
+    subheading: "What I can help you with, from the first sketch to a fast, polished website in production.",
+    ctaTitle: "Like what you see?",
     cards: [
       {
-        title: "Web Development",
-        text: "From frontend to backend, I develop scalable and secure web applications using modern web technologies. Clean architecture, maintainable code, and seamless API integrations are always a priority.",
+        title: "Frontend Development",
+        text: "Fast, responsive websites built with React and Next.js.",
       },
       {
-        title: "UI/UX Implementation",
-        text: "I turn designs into pixel-perfect, interactive experiences. With attention to spacing, motion, and usability, I ensure the final product feels smooth, natural, and user-friendly.",
+        title: "SEO & Performance Optimization",
+        text: "Better Google rankings and pages that load instantly.",
       },
       {
-        title: "Website Performance Optimization",
-        text: "I optimize websites for speed, SEO, and responsiveness. Faster load times, better Lighthouse scores, and improved user engagement come as a result.",
+        title: "Full-Stack Web Applications",
+        text: "Complete web apps with Node.js, Express, and MongoDB.",
       },
       {
-        title: "API Integration & Backend Logic",
-        text: "I integrate REST APIs and build backend logic with Node.js and .NET where needed, ensuring secure data handling and smooth communication between systems.",
+        title: "Admin Panels & Content Management",
+        text: "Dashboards to manage your own products, news, and pages.",
+      },
+      {
+        title: "Real-time Features & Integrations",
+        text: "Live chat, notifications, Google sign-in, and file uploads.",
       },
     ],
   },
@@ -92,6 +121,17 @@ const en = {
     heading: "My skills",
     subheading:
       "A collection of technologies and tools I actively use to build reliable, maintainable, and modern web applications.",
+    groups: {
+      frontend: "Frontend",
+      ui: "UI libraries",
+      state: "State & forms",
+      routing: "Routing",
+      animation: "Animation",
+      backend: "Backend",
+      integrations: "Integrations",
+      tools: "Tools & testing",
+      practices: "General practices",
+    },
   },
 
   // About Me
@@ -118,15 +158,26 @@ const en = {
   // WorkPage
   work: {
     heading: "My Works",
+    subheading: "A selection of websites I've designed and built for real clients, plus a few templates.",
+    projects: "Projects",
+    live: "Live site",
+    code: "Code",
+    back: "All work",
+    viewDetails: "View details",
+    type: "Type",
+    clientProject: "Client project",
+    private: "Private project",
+    privateNote: "Private system, not publicly available",
+    website: "Website",
+    stack: "Stack",
+    pages: "Screenshots",
+    nextProject: "Next project",
+    prevProject: "Previous project",
     template: "Template",
     cards: [
       {
         description:
-          "A modern corporate website developed for Imperia Group, an IT solutions provider. The project focuses entirely on frontend development, delivering a clean, responsive, and visually engaging user interface to clearly present the company's services and expertise. This website showcases advanced React components, smooth animations, and a user-centric design that enhances the overall user experience.",
-      },
-      {
-        description:
-          "A landing page for Piper, a mobile service-marketplace app that connects users with verified local tradespeople across 50+ home and office service categories, from plumbing and electrical work to repairs and cleaning. Users send a request, track the job status in real time, and pay the tradesperson directly. Built with Next.js and Tailwind CSS for a clean, responsive experience.",
+          "BHK Hesabat is a private financial reporting system built for Bərdə Hazırlıq Kursları. It tracks students, teachers, tuition payments, salaries, and exam income across all branches, with dashboards and charts for monthly income and expenses, role-based access for different staff, and contract uploads. Built with Next.js, TypeScript, MongoDB, and Cloudinary.",
       },
       {
         description:
@@ -135,6 +186,14 @@ const en = {
       {
         description:
           "A full-stack corporate website built for Sum Tekstil, focused on product presentation and brand identity. The project demonstrates backend development skills through API design, data handling, and server-side logic powering a responsive user interface. It includes features like product catalogs, contact forms, and admin panels for content management.",
+      },
+      {
+        description:
+          "A modern corporate website developed for Imperia Group, an IT solutions provider. The project focuses entirely on frontend development, delivering a clean, responsive, and visually engaging user interface to clearly present the company's services and expertise. This website showcases advanced React components, smooth animations, and a user-centric design that enhances the overall user experience.",
+      },
+      {
+        description:
+          "A landing page for Piper, a mobile service-marketplace app that connects users with verified local tradespeople across 50+ home and office service categories, from plumbing and electrical work to repairs and cleaning. Users send a request, track the job status in real time, and pay the tradesperson directly. Built with Next.js and Tailwind CSS for a clean, responsive experience.",
       },
       {
         description:
