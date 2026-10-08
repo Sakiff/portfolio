@@ -172,12 +172,15 @@ const en = {
     stack: "Stack",
     pages: "Screenshots",
     nextProject: "Next project",
+    titles: {
+      bhkHesabat: "BHK Financial Management System",
+    },
     prevProject: "Previous project",
     template: "Template",
     cards: [
       {
         description:
-          "BHK Hesabat is a private financial reporting system built for Bərdə Hazırlıq Kursları. It tracks students, teachers, tuition payments, salaries, and exam income across all branches, with dashboards and charts for monthly income and expenses, role-based access for different staff, and contract uploads. Built with Next.js, TypeScript, MongoDB, and Cloudinary.",
+          "BHK Financial Management System is a private financial reporting system built for Bərdə Hazırlıq Kursları. It tracks students, teachers, tuition payments, salaries, and exam income across all branches, with dashboards and charts for monthly income and expenses, role-based access for different staff, and contract uploads. Built with Next.js, TypeScript, MongoDB, and Cloudinary.",
       },
       {
         description:

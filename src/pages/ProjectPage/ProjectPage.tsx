@@ -11,7 +11,7 @@ import {
   Lock,
 } from "lucide-react";
 import Tile from "@/components/Bento/Tile";
-import { splitTechs, WORK_CARDS } from "@/data/workCards";
+import { projectTitle, splitTechs, WORK_CARDS } from "@/data/workCards";
 
 // Keyed by slug so the gallery starts from the first screenshot on every project.
 const ProjectPage = () => {
@@ -67,8 +67,8 @@ const ProjectView = ({ slug }: { slug?: string }) => {
         <div className="flex min-w-0 items-center gap-2">
           <Link
             to={`/work/${previous.slug}`}
-            aria-label={`${t("work.prevProject")}: ${previous.title}`}
-            title={`${t("work.prevProject")}: ${previous.title}`}
+            aria-label={`${t("work.prevProject")}: ${projectTitle(previous, t)}`}
+            title={`${t("work.prevProject")}: ${projectTitle(previous, t)}`}
             className="group flex size-9 shrink-0 items-center justify-center rounded-full border border-border bg-tile transition-colors hover:bg-accent"
           >
             <ArrowLeft
@@ -82,7 +82,7 @@ const ProjectView = ({ slug }: { slug?: string }) => {
           >
             <span className="truncate">
               {t("work.nextProject")}
-              <span className="hidden sm:inline">: {next.title}</span>
+              <span className="hidden sm:inline">: {projectTitle(next, t)}</span>
             </span>
             <ArrowRight
               size={15}
@@ -98,7 +98,7 @@ const ProjectView = ({ slug }: { slug?: string }) => {
           {project.number} / {String(WORK_CARDS.length).padStart(2, "0")}
         </span>
         <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-          {project.title}
+          {projectTitle(project, t)}
         </h1>
         <p className="max-w-2xl leading-relaxed text-muted-foreground lg:text-lg">
           {descriptions[index]?.description}
@@ -222,7 +222,7 @@ const ProjectView = ({ slug }: { slug?: string }) => {
             <img
               key={s.img}
               src={s.img}
-              alt={i === active ? `${project.title} — ${s.path}` : ""}
+              alt={i === active ? `${projectTitle(project, t)} — ${s.path}` : ""}
               aria-hidden={i !== active}
               className={`absolute inset-0 size-full object-cover object-top ${
                 i === active
@@ -268,7 +268,7 @@ const ProjectView = ({ slug }: { slug?: string }) => {
           <div className="flex flex-col gap-2">
             <span className="tile-label">{t("work.nextProject")}</span>
             <span className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              {next.title}
+              {projectTitle(next, t)}
             </span>
           </div>
           <div className="flex items-center gap-4">

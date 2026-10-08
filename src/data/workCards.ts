@@ -8,6 +8,8 @@ export type WorkCardItem = {
   slug: string;
   number: string;
   title: string;
+  // Locale key for projects whose name is translated; others keep `title` as is.
+  titleKey?: string;
   description: string;
   technologies: string;
   // Omitted for private projects.
@@ -25,6 +27,12 @@ export const splitTechs = (technologies: string) =>
     .map((tech) => tech.trim())
     .filter(Boolean);
 
+// The name to show for a project in the current language.
+export const projectTitle = (
+  card: Pick<WorkCardItem, "title" | "titleKey">,
+  t: (key: string) => string,
+) => (card.titleKey ? t(card.titleKey) : card.title);
+
 // Screenshots live in /public/assets/projects/<slug>/01.jpg, 02.jpg, ...
 const shots = (slug: string, paths: string[]): ProjectShot[] =>
   paths.map((path, i) => ({
@@ -40,7 +48,8 @@ export const WORK_CARDS: WorkCardItem[] = [
   {
     slug: "bhk-hesabat",
     number: "01",
-    title: "BHK Hesabat",
+    title: "BHK Maliyyə İdarəetmə Sistemi",
+    titleKey: "work.titles.bhkHesabat",
     description:
       "A private financial reporting system for Bərdə Hazırlıq Kursları: students, teachers, payments, salaries, and exam income with dashboards and role-based access.",
     technologies:

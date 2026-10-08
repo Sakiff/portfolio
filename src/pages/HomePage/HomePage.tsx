@@ -7,7 +7,7 @@ import LocalTime from "@/components/Bento/LocalTime";
 import { FaWhatsapp } from "react-icons/fa";
 import { EMAIL, SOCIAL_LINKS, WHATSAPP_URL } from "@/data/socialLinks";
 import { SKILL_ICONS } from "@/data/skillIcons";
-import { WORK_CARDS } from "@/data/workCards";
+import { projectTitle, WORK_CARDS } from "@/data/workCards";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -132,12 +132,12 @@ const HomePage = () => {
         >
           <img
             src={latest.img}
-            alt={latest.title}
+            alt={projectTitle(latest, t)}
             className="absolute inset-0 size-full object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.04]"
           />
           <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-2xl bg-tile/90 px-4 py-3 backdrop-blur-md">
             <div>
-              <p className="font-semibold">{latest.title}</p>
+              <p className="font-semibold">{projectTitle(latest, t)}</p>
               <p className="text-xs text-muted-foreground">
                 {latest.technologies}
               </p>

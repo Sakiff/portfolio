@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Tile from "@/components/Bento/Tile";
 import WorkCard from "@/components/WorkCard/WorkCard";
-import { WORK_CARDS } from "@/data/workCards";
+import { projectTitle, WORK_CARDS } from "@/data/workCards";
 
 const WorkPage = () => {
   const { t } = useTranslation();
@@ -40,6 +40,7 @@ const WorkPage = () => {
           key={card.slug}
           index={i + 1}
           {...card}
+          title={projectTitle(card, t)}
           description={translatedDescriptions[i]?.description ?? ""}
           templateLabel={t("work.template")}
           liveLabel={t("work.live")}
