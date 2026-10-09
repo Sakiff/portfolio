@@ -52,7 +52,7 @@ const ProjectView = ({ slug }: { slug?: string }) => {
   // Private projects have no public URL; the gallery shows a placeholder host.
   const domain = project.link
     ? new URL(project.link).hostname
-    : "bhk-hesabat.local";
+    : "finance-system.local";
   const shot = project.shots[active];
 
   return (

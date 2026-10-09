@@ -46,17 +46,17 @@ const sections = (count: number) =>
 
 export const WORK_CARDS: WorkCardItem[] = [
   {
-    slug: "bhk-hesabat",
+    slug: "financial-management-system",
     number: "01",
-    title: "BHK Maliyyə İdarəetmə Sistemi",
-    titleKey: "work.titles.bhkHesabat",
+    title: "Maliyyə İdarəetmə Sistemi",
+    titleKey: "work.titles.financialSystem",
     description:
-      "A private financial reporting system for Bərdə Hazırlıq Kursları: students, teachers, payments, salaries, and exam income with dashboards and role-based access.",
+      "A private financial reporting system for a multi-branch education center: students, teachers, payments, salaries, and exam income with dashboards and role-based access.",
     technologies:
       "Next.js · TypeScript · Tailwind · shadcn/ui · MongoDB · Cloudinary · Recharts",
-    img: "/assets/projects/bhk-hesabat/01.jpg",
+    img: "/assets/projects/financial-management-system/01.jpg",
     template: false,
-    shots: shots("bhk-hesabat", [
+    shots: shots("financial-management-system", [
       "/",
       "/kurs",
       "/kurs/sagirdler",

@@ -173,14 +173,14 @@ const az = {
     pages: "Ekran görüntüləri",
     nextProject: "Növbəti layihə",
     titles: {
-      bhkHesabat: "BHK Maliyyə İdarəetmə Sistemi",
+      financialSystem: "Maliyyə İdarəetmə Sistemi",
     },
     prevProject: "Əvvəlki layihə",
     template: "Şablon",
     cards: [
       {
         description:
-          "BHK Maliyyə İdarəetmə Sistemi — Bərdə Hazırlıq Kursları üçün hazırlanmış qapalı maliyyə hesabatı sistemi. Bütün korpuslar üzrə şagirdləri, müəllimləri, təhsil haqqı ödənişlərini, maaşları və imtahan gəlirlərini izləyir; aylıq gəlir və xərclər üçün qrafikli icmal panelləri, işçilər üçün rol əsaslı giriş və müqavilə yükləmə imkanı var. Next.js, TypeScript, MongoDB və Cloudinary ilə hazırlanıb.",
+          "Maliyyə İdarəetmə Sistemi — bir neçə filialı olan tədris mərkəzi üçün hazırlanmış qapalı maliyyə hesabatı sistemi. Bütün korpuslar üzrə şagirdləri, müəllimləri, təhsil haqqı ödənişlərini, maaşları və imtahan gəlirlərini izləyir; aylıq gəlir və xərclər üçün qrafikli icmal panelləri, işçilər üçün rol əsaslı giriş və müqavilə yükləmə imkanı var. Next.js, TypeScript, MongoDB və Cloudinary ilə hazırlanıb.",
       },
       {
         description:
